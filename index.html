@@ -536,6 +536,7 @@ window.addEventListener('resize', ()=>{
 // ----------------- NAVIGATION -----------------
 function playSound(id) {
   const sound = document.getElementById(id);
+
   const bgMusic = document.getElementById("bgMusic");
 
   // ✅ Pause background music if hit sound is played
@@ -553,7 +554,6 @@ function playSound(id) {
     };
   }
 }
-
 function enterSite(){ playSound("drumSound"); setTimeout(()=>{ start.classList.remove("active"); intro.classList.add("active"); document.getElementById("bgMusic").play(); },1200); }
 function goToGame(){ intro.classList.remove("active"); game.classList.add("active"); if(!phaserGame) initPhaser(); }
 let isPlaying = true;
